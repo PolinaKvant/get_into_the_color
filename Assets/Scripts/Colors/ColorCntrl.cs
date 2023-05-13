@@ -15,7 +15,7 @@ public class ColorCntrl
         _currentIndexColor = 0;
     }
 
-    public List<Color> GeneateColors()
+    public List<Color> GeneateColors()//генерирует цвета и создает список
     {
         List<Color> colors = new List<Color>();
         for (float i = 0; i <= 1; i += 0.5f)
@@ -33,7 +33,7 @@ public class ColorCntrl
 
     public void ShuffleColors()
     {
-        int n = _colors.Count;
+        int n = _colors.Count; //возвращает значение поля
         while (n > 1)
         {
             int k = _random.Next(--n);
@@ -41,13 +41,13 @@ public class ColorCntrl
         }
     }
 
-    public Color GetNextColor()
+    public Color GetNextColor() //выбирает следующий рандомный цвет из списка
     {
         _currentIndexColor = (_currentIndexColor+1) % _colors.Count;
         return _colors[_currentIndexColor];
     }
 
-    public Color GetRandomColor()
+    public Color GetRandomColor() //возвращает рандомный цвет
     {
         return _colors[_random.Next(_colors.Count)];
     }
