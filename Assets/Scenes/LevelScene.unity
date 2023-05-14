@@ -2430,7 +2430,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return?
+  m_Text: Menu
 --- !u!4 &543450652866936544
 Transform:
   m_ObjectHideFlags: 0
@@ -4038,6 +4038,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131054994820768323, guid: 2b7dda91047ed6d4488391735b987e55,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.107
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131054994820768323, guid: 2b7dda91047ed6d4488391735b987e55,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.182
       objectReference: {fileID: 0}
     - target: {fileID: 5473072585970504581, guid: 2b7dda91047ed6d4488391735b987e55,
         type: 3}
