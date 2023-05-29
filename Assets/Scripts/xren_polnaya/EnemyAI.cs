@@ -19,6 +19,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float _stopTargetFollowingRange;
     [SerializeField] private AIDestinationSetter _aiDestinationSetter;
 
+    [SerializeField] private EnemyAnimator _enemyAnimator;
+
     private Player _player;
     private EnemyStates _currentState;
     private Vector3 _roamPosition;
@@ -44,13 +46,20 @@ public class EnemyAI : MonoBehaviour
                 _aiDestinationSetter.target = _roamTarget.transform;
 
                 TryFindTarget();
+
+                _enemyAnimator.isWalking(false);
                 break;
             case EnemyStates.Following:
                 _aiDestinationSetter.target = _player.transform;
 
+                _enemyAnimator.isWalking(true);
+
                 if (Vector3.Distance(gameObject.transform.position, _player.transform.position) < _enemyAttack.AttackRange)
                 {
                     _enemyAttack.TryAttackPlayer();
+
+                    _enemyAnimator.PlayDance();
+                    _enemyAnimator.isWalking(false);
                 }
 
                 if (Vector3.Distance(gameObject.transform.position, _player.transform.position) >= _stopTargetFollowingRange)
