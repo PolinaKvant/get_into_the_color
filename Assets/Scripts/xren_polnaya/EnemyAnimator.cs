@@ -15,9 +15,9 @@ public class EnemyAnimator : MonoBehaviour
         animator.SetTrigger(Happy);
     }
 
-    public void PlayDance()
+    public void PlayDance(bool condition)
     {
-        animator.SetTrigger(Dance);
+        animator.SetBool(Dance, condition);
     }
     public void isWalking(bool condition)
     { 

@@ -58,7 +58,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     _enemyAttack.TryAttackPlayer();
 
-                    _enemyAnimator.PlayDance();
+                    _enemyAnimator.PlayDance(true);
                     _enemyAnimator.isWalking(false);
                 }
 

@@ -2889,7 +2889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33563af43420f844196db11949ef52ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackRange: 2
+  _attackRange: 4
 --- !u!54 &2034208103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2904,7 +2904,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 20
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!95 &2034208104
 Animator:
